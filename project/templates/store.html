@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping App</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='store.js') }}" async></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"/>
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid text-header">
+                    <div class="container">
+                      <h1 class="display-4">Shop project</h1>
+                      <blockquote class="blockquote text-right">
+                            <p class="mb-0">“Heroes are made by the path they choose, not the powers they are graced with.”</p>
+                            <footer class="blockquote-footer"> Iron Man</footer>
+                    </blockquote>
+                    </div>
+                  </div>
+        <section class="container content-section">
+            <div class="shop-items">
+                <div class="shop-item">
+                    <span class="shop-item-title">Wolverine</span>
+                    <img class="shop-item-image" src="static/images/wolverine.jpg">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$19.50</span>
+                        <button class="btn btn-dark shop-item-button" type="button">BUY</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Spiderman</span>
+                    <img class="shop-item-image" src="{{ url_for('static', filename='images/spiderman.jpg') }}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$14.99</span>
+                        <button class="btn btn-dark shop-item-button"type="button">BUY</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Beast</span>
+                    <img class="shop-item-image" src="{{ url_for('static', filename='images/beast.jpg') }}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-dark shop-item-button" type="button">BUY</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Multiple Man</span>
+                    <img class="shop-item-image" src="{{ url_for('static', filename='images/multipleman.jpg') }}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$33.99</span>
+                        <button class="btn btn-dark shop-item-button" type="button">BUY</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Iron Man</span>
+                    <img class="shop-item-image" src="{{ url_for('static', filename='images/ironman.jpg') }}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$25.60</span>
+                        <button class="btn btn-dark shop-item-button" type="button">BUY</button>
+                    </div>
+                </div>
+                <div class="shop-item">
+                    <span class="shop-item-title">Gambit</span>
+                    <img class="shop-item-image" src="{{ url_for('static', filename='images/gambit.jpg') }}">
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$27.99</span>
+                        <button class="btn btn-dark shop-item-button" type="button">BUY</button>
+                    </div>
+                </div>
+            </div>
+         </section>
+        <section class="container content-section">
+            <br>
+            <br>
+            <div>
+            <img src="{{ url_for('static', filename='images/shield.svg') }}" width="54px" height="54px">
+            </div>
+             <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+        </section>
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <p>Contact: patrick.suciu97@gmail.com</p>
+            </div>
+        </footer>
+    </body>
+</html>
